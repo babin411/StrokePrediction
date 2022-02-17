@@ -117,8 +117,7 @@ if __name__=='__main__':
         else:
             encoded_df = encode_cat_features(df)
             final_df = standardized_df(encoded_df)
-        model_path = os.path.join(os.getcwd(), 'models')
-        open_model = open(os.path.join(model_path,f'{models}', 'rb'))
+        open_model = open(os.path.join(model_path,models[0]),'rb')
         load_model = pickle.load(open_model)
         
         model_map = {
@@ -136,6 +135,7 @@ if __name__=='__main__':
         model_eval_df = pd.read_csv(os.path.join(os.getcwd(),'model_evaluation.csv'), index_col='Algorithm')
         model_name = model_map[models]
         print(f'Model Name: {model_name}')
+        print(f'Model Final Path: {model_final_path}')
         
         if  st.sidebar.button(label='Predict'):
             make_prediction(load_model,model_name, final_df)
