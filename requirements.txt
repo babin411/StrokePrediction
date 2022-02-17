@@ -7,3 +7,4 @@ seaborn==0.11.2
 matplotlib==3.5.0
 missingno==0.4.2
 imblearn==0.0
+xgboost==1.5.1
