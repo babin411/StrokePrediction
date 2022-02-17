@@ -117,7 +117,7 @@ if __name__=='__main__':
         else:
             encoded_df = encode_cat_features(df)
             final_df = standardized_df(encoded_df)
-        open_model = open(os.path.join(model_path,models[0]),'rb')
+        open_model = open(os.path.join(model_path,models),'rb')
         load_model = pickle.load(open_model)
         
         model_map = {
