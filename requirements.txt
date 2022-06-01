@@ -8,3 +8,4 @@ matplotlib==3.5.0
 missingno==0.4.2
 imblearn==0.0
 xgboost==1.5.1
+protobuf~=3.19.0
